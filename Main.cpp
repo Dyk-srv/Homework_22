@@ -16,11 +16,12 @@ void power(T* n, int m) {
 		*n = 1;
 		return;
 	}
-	else {
-		T result = *n;
-		for (int i = 1; i < m; i++)
-			*n *= result;
-	}
+	else 
+		if (m > 1) {
+			T result = *n;
+			for (int i = 1; i < m; i++)
+				*n *= result;
+		}
 }
 
 int main() {
